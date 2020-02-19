@@ -3,6 +3,7 @@ import java.util.Vector;
 
 public class Triangle extends Shape{
 
+
 	public Triangle(ShapeDescription description) {
 		super(description);
 		Vector<Double> newvector = description.getDoubles();
@@ -11,12 +12,15 @@ public class Triangle extends Shape{
 		Double sideC = newvector.get(2);
 	}
 
-	
 	Double sideA;
 	Double sideB;
 	Double sideC;
-	
-	
+
+
+	public double getPerimeter() {
+		double perimeter = sideA + sideB + sideC;
+		return perimeter;
+	}
 
 	public double getArea() {
 		double s = (getPerimeter()/2);
@@ -24,13 +28,9 @@ public class Triangle extends Shape{
 		return area;
 
 	}
-	public double getPerimeter() {
-		double perimeter = sideA + sideB + sideC;
-		return perimeter;
-	}
 
 }
-	
+
 
 //remove abstract from function names and change class header to "extends shape"
 //change function names to be the same as the shape class
