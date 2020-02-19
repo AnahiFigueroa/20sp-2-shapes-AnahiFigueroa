@@ -23,8 +23,8 @@ public class Triangle extends Shape{
 	}
 
 	public double getArea() {
-		double s = (getPerimeter()/2);
-		double area = Math.sqrt(s*(s-sideA)* (s-sideB) * (s-sideC));
+		double s = (sideA + sideB + sideC)/2;
+		double area = s*(s-sideA)* (s-sideB) * (s-sideC));
 		return area;
 
 	}
