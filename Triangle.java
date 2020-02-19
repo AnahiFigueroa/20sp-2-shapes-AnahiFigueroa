@@ -7,13 +7,13 @@ public class Triangle extends Shape{
 	public Triangle(ShapeDescription description) {
 		super(description);
 		Vector<Double> newvector = description.getDoubles();
-		Double sideA = newvector.get(0);
-		Double sideB = newvector.get(1);
-		Double sideC = newvector.get(2);
+		 sideA = newvector.get(0);
+		 sideB = newvector.get(1);
+		 sideC = newvector.get(2);
 	}
 
 	public Double sideA;
-	public Double sideB;
+	public Double sideB; 
 	public Double sideC;
 	public double area;
 	public double perimeter;
