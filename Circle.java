@@ -4,6 +4,8 @@ import java.util.Vector;
 public class Circle extends Shape {
 
 	public double radius;
+	public double area;
+	public double perimeter; 
 	public double getArea() {
 		return area;
 	}
