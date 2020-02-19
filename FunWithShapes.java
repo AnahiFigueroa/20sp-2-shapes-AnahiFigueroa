@@ -1,3 +1,4 @@
+import java.util.Vector;
 
 public class FunWithShapes extends ShapeHandler {
 
@@ -12,10 +13,10 @@ public class FunWithShapes extends ShapeHandler {
 	 * of actual shape objects.
 	 */
 	public void convertDescriptionsToShapes() {
-		shapes = new Vector<shape>();
+		shapes = new Vector<Shape>();
 
 		for (ShapeDescription sd: shapeDescriptions) {
-			if (sd.getShapeType() == ShapeDescription.ShapeTypes.CIRCLE) {
+			if (((ShapeDescription) sd).getShapeType() == ShapeDescription.ShapeTypes.CIRCLE) {
 				Shape shape = new Circle(sd);
 				shapes.add(shape);
 
@@ -31,7 +32,7 @@ public class FunWithShapes extends ShapeHandler {
 				shapes.add(shape);
 			}
 
-			else if (sd.sdgetShapeType() == ShapeDescription.ShapeTypes.RECTANGLE) {
+			else if (sd.getShapeType() == ShapeDescription.ShapeTypes.RECTANGLE) {
 				Shape shape = new Rectangle(sd);
 				shapes.add(shape);
 			}
@@ -51,7 +52,8 @@ public class FunWithShapes extends ShapeHandler {
 		for (Shape s: shapes) {
 			areas += s.getArea();
 		}
-
+          
+		return areas; 
 
 	}
 
@@ -65,10 +67,12 @@ public class FunWithShapes extends ShapeHandler {
 		for (Shape s: shapes) {
 			perimeter += s.getPerimeter();
 		}
+		
+		return perimeter; 
 	}
 
 
-	public static void main(String[] args) throws ShapeException {
+	public static void main(String[] args) throws ShapeException{
 
 	  FunWithShapes shapes = new FunWithShapes();
 	  System.out.println(shapes.sumOverAreas());
@@ -77,3 +81,4 @@ public class FunWithShapes extends ShapeHandler {
 	}
 
 }
+
