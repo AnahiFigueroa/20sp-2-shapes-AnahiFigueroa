@@ -8,10 +8,10 @@ public class ShapeDescription {
 		RECTANGLE,
 		TRIANGLE
 	}
-	
+
 	private ShapeTypes shapeType;
 	private Vector<Double> doubles;
-	
+
 	/**
 	 * Given a line from a file, parse it into a shape
 	 * @param line
@@ -51,8 +51,8 @@ public class ShapeDescription {
 			throw new ShapeException();
 		}
 	}
-	
-	
+
+
 	/**
 	 * @return the shapeType
 	 */
@@ -68,5 +68,5 @@ public class ShapeDescription {
 	}
 
 
-	
+
 }
