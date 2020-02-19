@@ -19,10 +19,12 @@ public class Circle extends Shape {
 
 	public double SetCircleArea(){
  	 double area = Math.PI * (radius * radius);
+	 return area; 
   }
 
    public double SetCirclePerimeter(){
  		double perimeter = 2 * (Math.PI * radius);
+		return perimeter;
  	}
 
 	public Circle(ShapeDescription description) {
