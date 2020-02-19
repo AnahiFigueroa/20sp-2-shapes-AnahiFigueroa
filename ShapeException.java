@@ -1,7 +1,7 @@
 /**
  * This is a new type of exception, dedicated exclusively
  * to this COSC150 homework assignment.
- * 
+ *
  * @author msherr
  */
 public class ShapeException extends Exception {
@@ -14,9 +14,9 @@ public class ShapeException extends Exception {
 	ShapeException() {
 		super();
 	}
-	
+
 	ShapeException( String description ) {
 		super(description);
 	}
-	
+
 }
