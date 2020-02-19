@@ -3,14 +3,17 @@ import java.util.Vector;
 
 public class Circle extends Shape {
 
-	double radius;
+	public double radius;
 	public double getArea() {
 		return area;
 	}
+
+	@Override
 	public double getPerimeter() {
 		return perimeter;
 	}
 
+  @Override
 	public double CircleArea(){
  	 double area = Math.PI * (radius * radius);
   }
