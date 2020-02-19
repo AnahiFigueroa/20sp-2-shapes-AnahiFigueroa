@@ -12,13 +12,17 @@ public class Triangle extends Shape{
 		Double sideC = newvector.get(2);
 	}
 
-	Double sideA;
-	Double sideB;
-	Double sideC;
+	public Double sideA;
+	public Double sideB;
+	public Double sideC;
+	public double area;
+	public double perimeter;
 
 
 	public double getPerimeter() {
-		double perimeter = sideA + sideB + sideC;
+
+		double perimeter = (sideA + sideB + sideC);
+
 		return perimeter;
 	}
 
