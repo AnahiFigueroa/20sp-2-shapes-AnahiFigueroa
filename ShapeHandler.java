@@ -7,17 +7,17 @@ import java.util.Vector;
 
 
 public abstract class ShapeHandler {
-	
+
 	protected Vector<ShapeDescription> shapeDescriptions;
 	protected Vector<Shape> shapes;
-	
-	
+
+
 	/**
 	 * Populates the shapeDefinitions vector with
-	 * some definitions of shapes.  You'll need to implement 
+	 * some definitions of shapes.  You'll need to implement
 	 * the convertDescriptionsToShapes function to actually convert
 	 * these descriptions to useful shapes.
-	 * 
+	 *
 	 * @param filename the file containing the definitions of the shapes
 	 */
 	ShapeHandler() throws ShapeException {
@@ -30,8 +30,8 @@ public abstract class ShapeHandler {
 			BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
 			while ((line = reader.readLine()) != null) {
 				ShapeDescription description = new ShapeDescription(line);
-				shapeDescriptions.add(description);				
-			}			
+				shapeDescriptions.add(description);
+			}
 			reader.close();
 		} catch (FileNotFoundException e) {
 			throw new ShapeException( "File not found" );
@@ -41,29 +41,29 @@ public abstract class ShapeHandler {
 		convertDescriptionsToShapes();
 	}
 
-	
+
 	/**
 	 * Given the shapeDescriptions, converts it to a vector
 	 * of actual shape objects.
 	 */
 	public abstract void convertDescriptionsToShapes();
 
-	
-	
+
+
 	/**
 	 * Computes the sum of the shapes' areas, where the shapes
 	 * are from the shapes list
 	 * @return the sum of the shapes' areas
 	 */
 	public abstract double sumOverAreas();
-	
 
-	
+
+
 	/**
 	 * Computes the sum of the shapes' perimeters, where the shapes
 	 * are from the shapes list
 	 * @return the sum of the shapes' perimeters
 	 */
-	public abstract double sumOverPerimeters(); 
+	public abstract double sumOverPerimeters();
 
 }
