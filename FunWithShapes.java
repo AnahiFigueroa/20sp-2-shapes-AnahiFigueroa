@@ -48,12 +48,12 @@ public class FunWithShapes extends ShapeHandler {
 	 * @return the sum of the shapes' areas
 	 */
 	public double sumOverAreas() {
-		double areas = 0.0;
+		double areas = 0;
 		for (Shape s: shapes) {
 			areas += s.getArea();
 		}
-          
-		return areas; 
+
+		return areas;
 
 	}
 
@@ -63,12 +63,12 @@ public class FunWithShapes extends ShapeHandler {
 	 * @return the sum of the shapes' perimeters
 	 */
 	public double sumOverPerimeters() {
-		double perimeter = 0.0;
+		double perimeter = 0;
 		for (Shape s: shapes) {
 			perimeter += s.getPerimeter();
 		}
-		
-		return perimeter; 
+
+		return perimeter;
 	}
 
 
@@ -81,4 +81,3 @@ public class FunWithShapes extends ShapeHandler {
 	}
 
 }
-
