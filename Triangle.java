@@ -21,14 +21,14 @@ public class Triangle extends Shape{
 
 	public double getPerimeter() {
 
-		double perimeter = (sideA + sideB + sideC);
+	 perimeter = (sideA + sideB + sideC);
 
 		return perimeter;
 	}
 
 	public double getArea() {
-		double s = (getPerimeter())/2;
-		double area = Math.sqrt(s*(s-sideA)* (s-sideB) * (s-sideC));
+		double s = ((getPerimeter())/2);
+	  area = Math.sqrt(s*(s-sideA)* (s-sideB) * (s-sideC));
 		return area;
 
 	}
